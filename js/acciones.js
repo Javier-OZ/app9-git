@@ -24,7 +24,7 @@ function getPosition() {
 		maximunAge: 3600000
 	}
 	
-	var watchID = navigator.geolocation.getCurrentPosition(onSucces, onError, options);
+	var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
 	
 	function onSuccess(position) {
 		
@@ -62,7 +62,7 @@ function watchPosition() {
 		$('#aaccuracy').html(position.coords.altitudeAccuracy);
 		$('#headingg').html(position.coords.heading);
 		$('#speed').html(position.coords.speed);
-		$('#timestamp').html(position.coords.timestamp);
+		$('#timestamp').html(position.timestamp);
 	};
 	
 	function onError(error) {
